@@ -27,17 +27,47 @@ test("One euro should be 1.206 dollars", function(){
     expect(fromEuroToDollar(3.5)).toBe(4.2); //1 euro son 1.2 dolares, entonces 3.5 euros deberian ser = (3.5 * 1.2)
 })
 
-test("One dollar should be  yen", function(){
+test("One dollar should be 106.6 yen", function(){
     // hago mi comparacion (la prueba)
     expect(fromDollarToYen(3.5)).toBeCloseTo(373.04); //1 dollar son 106.6 yen, entonces 3.5 dollares deberian ser = (3.5 * 106.6)
 })
 
-test("One yan should be  pounds", function(){
+test("One yan should be 0.0063 pounds", function(){
     // hago mi comparacion (la prueba)
     expect(fromYanToPound(3.5)).toBeCloseTo(0.022); //1 yan son 0.0063 pounds, entonces 3.5 yen deberian ser = (3.5 * 0.0063)
 })
 
-test("One dollar should be  euros", function(){
+test("One dollar should be 0.833 euros", function(){
     // hago mi comparacion (la prueba)
     expect(fromDollarToEuro(3.5)).toBeCloseTo(2.92); //1 dollar son 0.833 euros, entonces 3.5 dollares deberian ser = (3.5 * 0.833)
 })
+
+test("Is a function", function(){
+    // hago mi comparacion (la prueba)
+    const isFunction = typeof (fromDollarToEuro) === "function"
+    expect(isFunction).toBe(true);
+})
+
+test("Result is a number", function(){
+    // hago mi comparacion (la prueba)
+    const isNumber = typeof (fromDollarToEuro(2)) === "number"
+    expect(isNumber).toBe(true);
+})
+
+// test("Have a parameter", function(){
+//     // hago mi comparacion (la prueba)
+//     const isNumber = fromDollarToEuro() === "number"
+//     expect(fromDollarToEuro()).toBe(true);
+// })
+
+// test("Receive NaN", function(){
+//     // hago mi comparacion (la prueba)
+//     const isNumber = fromDollarToEuro() === "number"
+//     expect(fromDollarToEuro()).toBe(true);
+// })
+
+// test("Receive !number", function(){
+//     // hago mi comparacion (la prueba)
+//     const isNumber = fromDollarToEuro() === "number"
+//     expect(fromDollarToEuro()).toBe(true);
+// })
